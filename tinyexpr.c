@@ -77,7 +77,8 @@ PHP_FUNCTION(te_interp)
         Z_PARAM_STR(str)
     ZEND_PARSE_PARAMETERS_END();
 
-    RETVAL_STR(te_interp(str, 0));
+    double d = te_interp(str, 0);
+    RETVAL_DOUBLE(d);
 }
 
 #endif

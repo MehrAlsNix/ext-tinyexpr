@@ -43,7 +43,7 @@
 #endif
 
 /* Declare all functions and classes of the extension */
-static PHP_FUNCTION(te_interp);
+static PHP_FUNCTION(tinyexpr_interpret);
 
 extern zend_module_entry tinyexpr_module_entry;
 

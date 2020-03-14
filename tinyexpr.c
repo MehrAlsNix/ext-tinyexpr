@@ -42,13 +42,13 @@
 #if HAVE_TINYEXPR
 
 /* Argument info for each function, used for reflection */
-ZEND_BEGIN_ARG_INFO_EX(arginfo_te_interp, 0, 1, 0)
+ZEND_BEGIN_ARG_INFO_EX(arginfo_tinyexpr_interpret, 0, 1, 0)
     ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 1)
 ZEND_END_ARG_INFO()
 
 /* Add all functions. (Keep PHP_FE_END as last element) */
 static const zend_function_entry functions[] = {
-    PHP_FE(te_interp, arginfo_te_interp)
+    PHP_FE(tinyexpr_interpret, arginfo_tinyexpr_interpret)
     PHP_FE_END
 };
 
@@ -69,7 +69,7 @@ zend_module_entry tinyexpr_module_entry = {
 ZEND_GET_MODULE(tinyexpr)
 #endif
 
-PHP_FUNCTION(te_interp)
+PHP_FUNCTION(tinyexpr_interpret)
 {
     zend_string *str;
 

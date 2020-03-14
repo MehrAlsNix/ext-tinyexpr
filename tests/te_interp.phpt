@@ -1,8 +1,8 @@
 --TEST--
-te_interp basic test
+tinyexpr_interpret basic test
 --FILE--
 <?php
-var_dump(te_interp("1+1"));
+var_dump(tinyexpr_interpret("1+1"));
 
 ?>
 --EXPECT--

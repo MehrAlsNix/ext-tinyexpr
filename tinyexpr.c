@@ -37,6 +37,7 @@
 #include "php_tinyexpr.h"
 #include "zend_exceptions.h"
 #include "ext/standard/info.h"
+#include "lib/tinyexpr.h"
 
 #if HAVE_TINYEXPR
 
@@ -76,7 +77,7 @@ PHP_FUNCTION(te_interp)
         Z_PARAM_STR(str)
     ZEND_PARSE_PARAMETERS_END();
 
-    RETVAL_STR(str);
+    RETVAL_STR(te_interp(str, 0));
 }
 
 #endif

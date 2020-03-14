@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.8)
-project(skeleton C)
+project(tinyexpr C)
 
-add_compile_definitions(HAVE_SKELETON)
+add_compile_definitions(HAVE_TINYEXPR)
 
-set(SOURCE_FILES php_skeleton skeleton.c)
+set(SOURCE_FILES php_tinyexpr tinyexpr.c)
 
 execute_process (
         COMMAND php-config --include-dir

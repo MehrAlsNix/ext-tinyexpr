@@ -1,10 +1,10 @@
 // $Id$
 // vim:ft=javascript
 
-ARG_ENABLE("skeleton", "enable skeleton", "no");
+ARG_ENABLE("tinyexpr", "enable tinyexpr", "no");
 
-if (PHP_SKELETON != "no") {
-	EXTENSION("skeleton", "skeleton.c");
-	AC_DEFINE('HAVE_SKELETON', 1 , 'whether skeleton is enabled');
-	PHP_INSTALL_HEADERS("ext/skeleton/", "php_skeleton.h");
+if (PHP_TINYEXPR != "no") {
+	EXTENSION("tinyexpr", "tinyexpr.c");
+	AC_DEFINE('HAVE_TINYEXPR', 1 , 'whether tinyexpr is enabled');
+	PHP_INSTALL_HEADERS("ext/tinyexpr/", "php_tinyexpr.h");
 }

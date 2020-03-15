@@ -8,22 +8,6 @@ Math evaluation for strings.
 
 > TinyExpr is a very small parser and evaluation library for evaluating math expressions from C
 
-### Examples
-
-```shell script
-docker-compose build
-docker-compose up -d
-docker-compose exec php bash
-```
-```
-php -r "var_dump(tinyexpression_interpret('2*9+8-(5/9)'));"
-php -r "var_dump(tinyexpression_interpret('sin(0.6)'));"
-```
-```
-float(25.444444444444)
-float(0.56464247339504)
-```
-
 ### Installation
 
 #### Linux
@@ -41,3 +25,42 @@ echo "extension=tinyexpression.so" > /usr/local/etc/php/conf.d/tinyexpression.in
 #### Windows
 
 tbd.
+
+<hr>
+
+### Functions
+
+#### tinyexpression_interpret
+<hr>
+(TinyExpression 0.0.1)
+
+tinyexpression_interpret - Evaluate math expressions from a `string`.
+
+##### Description
+```
+tinyexpression_interpret ( string $expr ) : float
+```
+
+##### Parameters
+
+<b>expr</b> `string`
+
+##### Return Values
+
+Returns the evaluated math expression as a `float`.
+
+##### Examples
+
+```shell script
+docker-compose build
+docker-compose up -d
+docker-compose exec php bash
+```
+```
+php -r "var_dump(tinyexpression_interpret('2*9+8-(5/9)'));"
+php -r "var_dump(tinyexpression_interpret('sin(0.6)'));"
+```
+```
+float(25.444444444444)
+float(0.56464247339504)
+```

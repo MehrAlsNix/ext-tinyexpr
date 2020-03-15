@@ -7,7 +7,7 @@ branches:
   - w32
 
 environment:
-  EXTNAME: tinyexpr
+  EXTNAME: tinyexpression
 
   matrix:
     - PHP_VERSION: 7.2

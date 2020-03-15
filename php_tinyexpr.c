@@ -42,8 +42,8 @@
 #if HAVE_TINYEXPR
 
 /* Argument info for each function, used for reflection */
-ZEND_BEGIN_ARG_INFO_EX(arginfo_tinyexpr_interpret, 0, 1, 0)
-    ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 1)
+ZEND_BEGIN_ARG_INFO_EX(arginfo_tinyexpr_interpret, 0, 0, 1)
+    ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
 PHP_MINFO_FUNCTION(tinyexpr)

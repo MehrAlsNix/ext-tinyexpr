@@ -6,7 +6,9 @@ sinclude(./autoconf/php-executable.m4)
 
 PECL_INIT([tinyexpr])
 
-PHP_ARG_ENABLE(tinyexpr, whether to enable tinyexpr, [ --enable-tinyexpr   Enable tinyexpr])
+PHP_ARG_ENABLE(tinyexpr,
+[whether to enable tinyexpr],
+[--enable-tinyexpr           Enable tinyexpr])
 
 if test "$PHP_TINYEXPR" != "no"; then
   AC_DEFINE(HAVE_TINYEXPR, 1, [whether tinyexpr is enabled])

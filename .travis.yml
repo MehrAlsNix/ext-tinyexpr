@@ -20,7 +20,7 @@ branches:
 
 install:
   - phpize
-  - ./configure
+  - ./configure --enable-tinyexpr
   - make
 
 before_script:

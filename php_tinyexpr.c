@@ -46,6 +46,14 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_tinyexpr_interpret, 0, 1, 0)
     ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 1)
 ZEND_END_ARG_INFO()
 
+PHP_MINFO_FUNCTION(tinyexpr)
+{
+    php_info_print_table_start();
+    php_info_print_table_row(2, "tinyexpr support", "enabled");
+    php_info_print_table_row(2, "extension version",  PHP_TINYEXPR_VERSION);
+    php_info_print_table_end();
+}
+
 /* Add all functions. (Keep PHP_FE_END as last element) */
 static const zend_function_entry functions[] = {
     PHP_FE(tinyexpr_interpret, arginfo_tinyexpr_interpret)
@@ -60,7 +68,7 @@ zend_module_entry tinyexpr_module_entry = {
     NULL,
     NULL,
     NULL,
-    NULL,
+    PHP_MINFO(tinyexpr),
     PHP_TINYEXPR_VERSION,
     STANDARD_MODULE_PROPERTIES
 };

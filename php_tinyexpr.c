@@ -55,7 +55,7 @@ PHP_MINFO_FUNCTION(tinyexpr)
 }
 
 /* Add all functions. (Keep PHP_FE_END as last element) */
-static const zend_function_entry functions[] = {
+static const zend_function_entry pib_functions[] = {
     PHP_FE(tinyexpr_interpret, arginfo_tinyexpr_interpret)
     PHP_FE_END
 };

@@ -9,6 +9,11 @@ Math evaluation for strings.
 ### Examples
 
 ```shell script
+docker-compose build
+docker-compose up -d
+docker-compose exec php bash
+```
+```
 php -r "var_dump(tinyexpression_interpret('2*9+8-(5/9)'));"
 php -r "var_dump(tinyexpression_interpret('sin(0.6)'));"
 ```

@@ -1,6 +1,8 @@
 # PHP TinyExpression
 Math evaluation for strings.
 
+[![Build Status](https://travis-ci.com/MehrAlsNix/ext-tinyexpr.svg?branch=master)](https://travis-ci.com/MehrAlsNix/ext-tinyexpr) [![Build status](https://ci.appveyor.com/api/projects/status/ih0hlmc8dnv3fji9?svg=true)](https://ci.appveyor.com/project/siad007/ext-tinyexpr)
+
 ## TinyExpr Binding
 [TinyExpr](https://github.com/codeplea/tinyexpr) Bindings for PHP
 

@@ -53,15 +53,17 @@ Returns the evaluated math expression as a `float`.
 
 ##### Examples
 
-```shell script
+```
 docker-compose build
 docker-compose up -d
 docker-compose exec php bash
 ```
+
 ```
 php -r "var_dump(tinyexpression_interpret('2*9+8-(5/9)'));"
 php -r "var_dump(tinyexpression_interpret('sin(0.6)'));"
 ```
+
 ```
 float(25.444444444444)
 float(0.56464247339504)

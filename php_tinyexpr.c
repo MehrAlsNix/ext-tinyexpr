@@ -71,7 +71,7 @@ ZEND_GET_MODULE(tinyexpr)
 
 PHP_FUNCTION(tinyexpr_interpret)
 {
-    char *str;
+    const char *str;
     size_t str_len;
 
     if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "s", &str, &str_len) != SUCCESS) {

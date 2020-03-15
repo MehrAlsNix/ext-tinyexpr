@@ -25,6 +25,7 @@ install:
   - phpize
   - ./configure --enable-tinyexpr
   - make
+  - php -m
 
 before_script:
   make install

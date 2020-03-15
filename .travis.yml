@@ -39,18 +39,3 @@ after_failure:
       cat FILE
       echo
     done
-
-before_deploy:
-  - pecl package
-  - export RELEASE_PACKAGE=$(ls "$EXTNAME"-*.tgz)
-
-deploy:
-  provider: releases
-  # auth_token:
-  #   secure: <your encrypted token>
-  file: "$RELEASE_PACKAGE"
-  cleanup: false
-  name: "$TRAVIS_TAG"
-  prerelease: true
-  on:
-    tags: true

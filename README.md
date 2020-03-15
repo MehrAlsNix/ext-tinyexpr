@@ -12,7 +12,7 @@ Math evaluation for strings.
 
 #### Linux
 
-```shell script
+```
 git clone --branch "master" --depth 1 https://github.com/MehrAlsNix/ext-tinyexpr.git /tmp/tinyexpression
 cd /tmp/tinyexpression
 phpize

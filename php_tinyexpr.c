@@ -37,7 +37,7 @@
 #include "php_tinyexpr.h"
 #include "zend_exceptions.h"
 #include "ext/standard/info.h"
-#include "tinyexpr.h"
+#include "tinyexpr.c"
 
 #if HAVE_TINYEXPR
 

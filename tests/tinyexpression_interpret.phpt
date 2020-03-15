@@ -11,5 +11,4 @@ var_dump(tinyexpression_interpret("1+1"));
 
 ?>
 --EXPECT--
-double(2)
-
+float(2)

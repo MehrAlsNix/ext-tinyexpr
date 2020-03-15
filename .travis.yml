@@ -27,6 +27,8 @@ before_script:
   make install
 
 script:
+  php -m
+  php -r "var_dump(tinyexpr_interpret('1+1'));"
   make test
 
 after_failure:

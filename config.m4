@@ -15,5 +15,5 @@ if test "$PHP_TINYEXPR" != "no"; then
   PHP_NEW_EXTENSION(tinyexpr, php_tinyexpr.c, tinyexpr.c, $ext_shared)
 
   PHP_ADD_MAKEFILE_FRAGMENT
-  PHP_INSTALL_HEADERS([ext/tinyexpr], [php_tinyexpr.h, tinyexpr.h])
+  PHP_INSTALL_HEADERS([ext/tinyexpr], [php_tinyexpr.h])
 fi

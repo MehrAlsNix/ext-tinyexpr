@@ -32,7 +32,7 @@ tbd.
 
 #### tinyexpression_interpret
 <hr>
-(TinyExpression 0.0.1)
+(TinyExpression 0.1.0)
 <br>
 <br>
 

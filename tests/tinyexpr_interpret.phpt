@@ -6,5 +6,5 @@ var_dump(tinyexpr_interpret("1+1"));
 
 ?>
 --EXPECT--
-string(11) "2"
+double(2)
 

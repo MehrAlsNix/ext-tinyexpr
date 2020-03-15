@@ -1,14 +1,17 @@
-env:
-  EXTNAME: tinyexpr
-
+os: linux
+dist: xenial
 language: php
+
 php:
   - 7.2
   - 7.3
   - 7.4snapshot
   - nightly
 
-matrix:
+env:
+  EXTNAME: tinyexpr
+
+jobs:
   allow_failures:
     - php: nightly
 
@@ -43,10 +46,10 @@ before_deploy:
 
 deploy:
   provider: releases
-  auth_token:
-    secure: <your encrypted token>
+  # auth_token:
+  #   secure: <your encrypted token>
   file: "$RELEASE_PACKAGE"
-  skip_cleanup: true
+  cleanup: false
   name: "$TRAVIS_TAG"
   prerelease: true
   on:

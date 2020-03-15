@@ -71,11 +71,12 @@ ZEND_GET_MODULE(tinyexpr)
 
 PHP_FUNCTION(tinyexpr_interpret)
 {
-    zend_string *str;
+    char *str;
+    size_t str_len;
 
-    ZEND_PARSE_PARAMETERS_START_EX(ZEND_PARSE_PARAMS_THROW, 1, 1)
-        Z_PARAM_STR(str)
-    ZEND_PARSE_PARAMETERS_END();
+    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "s", &str, &str_len) != SUCCESS) {
+        return;
+    }
 
     double d = te_interp(str, 0);
     RETVAL_DOUBLE(d);

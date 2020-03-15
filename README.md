@@ -16,3 +16,21 @@ php -r "var_dump(tinyexpression_interpret('sin(0.6)'));"
 float(25.444444444444)
 float(0.56464247339504)
 ```
+
+### Installation
+
+#### Linux
+
+```shell script
+git clone --branch "master" --depth 1 https://github.com/MehrAlsNix/ext-tinyexpr.git /tmp/tinyexpression
+cd /tmp/tinyexpression
+phpize
+./configure
+make
+make install
+echo "extension=tinyexpression.so" > /usr/local/etc/php/conf.d/tinyexpression.ini
+```
+
+#### Windows
+
+tbd.

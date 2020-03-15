@@ -4,7 +4,7 @@
 ARG_ENABLE("tinyexpr", "enable tinyexpr", "no");
 
 if (PHP_TINYEXPR != "no") {
-	EXTENSION("tinyexpr", "tinyexpr.c");
+	EXTENSION("tinyexpr", "php_tinyexpr.c");
 	AC_DEFINE('HAVE_TINYEXPR', 1 , 'whether tinyexpr is enabled');
 	PHP_INSTALL_HEADERS("ext/tinyexpr/", "php_tinyexpr.h");
 }

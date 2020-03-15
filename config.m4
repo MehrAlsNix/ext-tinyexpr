@@ -1,19 +1,19 @@
 dnl $Id$
-dnl config.m4 for extension tinyexpr
+dnl config.m4 for extension tinyexpression
 
 sinclude(./autoconf/pecl.m4)
 sinclude(./autoconf/php-executable.m4)
 
-PECL_INIT([tinyexpr])
+PECL_INIT([tinyexpression])
 
-PHP_ARG_ENABLE(tinyexpr,
-[whether to enable tinyexpr],
-[--enable-tinyexpr           Enable tinyexpr])
+PHP_ARG_ENABLE(tinyexpression,
+[whether to enable tinyexpression],
+[--enable-tinyexpression           Enable tinyexpression])
 
-if test "$PHP_TINYEXPR" != "no"; then
-  AC_DEFINE(HAVE_TINYEXPR, 1, [whether tinyexpr is enabled])
-  PHP_NEW_EXTENSION(tinyexpr, php_tinyexpr.c, $ext_shared)
+if test "$PHP_TINYEXPRESSION" != "no"; then
+  AC_DEFINE(HAVE_TINYEXPRESSION, 1, [whether tinyexpression is enabled])
+  PHP_NEW_EXTENSION(tinyexpression, tinyexpression.c, $ext_shared)
 
   PHP_ADD_MAKEFILE_FRAGMENT
-  PHP_INSTALL_HEADERS([ext/tinyexpr], [php_tinyexpr.h])
+  PHP_INSTALL_HEADERS([ext/tinyexpression], [tinyexpression.h])
 fi

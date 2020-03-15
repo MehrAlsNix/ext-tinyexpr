@@ -34,50 +34,50 @@
 
 #include "php.h"
 #include "php_ini.h"
-#include "php_tinyexpr.h"
+#include "tinyexpression.h"
 #include "zend_exceptions.h"
 #include "ext/standard/info.h"
 #include "tinyexpr.c"
 
-#if HAVE_TINYEXPR
+#if HAVE_TINYEXPRESSION
 
 /* Argument info for each function, used for reflection */
-ZEND_BEGIN_ARG_INFO_EX(arginfo_tinyexpr_interpret, 0, 0, 1)
+ZEND_BEGIN_ARG_INFO_EX(arginfo_tinyexpression_interpret, 0, 0, 1)
     ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
-PHP_MINFO_FUNCTION(tinyexpr)
+PHP_MINFO_FUNCTION(tinyexpression)
 {
     php_info_print_table_start();
-    php_info_print_table_row(2, "tinyexpr support", "enabled");
-    php_info_print_table_row(2, "extension version",  PHP_TINYEXPR_VERSION);
+    php_info_print_table_row(2, "tinyexpression support", "enabled");
+    php_info_print_table_row(2, "extension version",  PHP_TINYEXPRESSION_VERSION);
     php_info_print_table_end();
 }
 
 /* Add all functions. (Keep PHP_FE_END as last element) */
-static const zend_function_entry pib_functions[] = {
-    PHP_FE(tinyexpr_interpret, arginfo_tinyexpr_interpret)
+static const zend_function_entry te_functions[] = {
+    PHP_FE(tinyexpression_interpret, arginfo_tinyexpression_interpret)
     PHP_FE_END
 };
 
-zend_module_entry tinyexpr_module_entry = {
+zend_module_entry tinyexpression_module_entry = {
     STANDARD_MODULE_HEADER,
-    PHP_TINYEXPR_EXTNAME,
-    functions,
+    PHP_TINYEXPRESSION_EXTNAME,
+    te_functions,
     NULL,
     NULL,
     NULL,
     NULL,
-    PHP_MINFO(tinyexpr),
-    PHP_TINYEXPR_VERSION,
+    PHP_MINFO(tinyexpression),
+    PHP_TINYEXPRESSION_VERSION,
     STANDARD_MODULE_PROPERTIES
 };
 
-#ifdef COMPILE_DL_TINYEXPR
-ZEND_GET_MODULE(tinyexpr)
+#ifdef COMPILE_DL_TINYEXPRESSION
+ZEND_GET_MODULE(tinyexpression)
 #endif
 
-PHP_FUNCTION(tinyexpr_interpret)
+PHP_FUNCTION(tinyexpression_interpret)
 {
     const char *str;
     size_t str_len;

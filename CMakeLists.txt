@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.8)
-project(tinyexpr C)
+project(tinyexpression C)
 
-add_compile_definitions(HAVE_TINYEXPR)
+add_compile_definitions(HAVE_TINYEXPRESSION)
 
-set(SOURCE_FILES php_tinyexpr php_tinyexpr.c)
+set(SOURCE_FILES tinyexpression tinyexpression.c)
 
 execute_process (
         COMMAND php-config --include-dir

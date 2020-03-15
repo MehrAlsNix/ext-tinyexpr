@@ -5,11 +5,11 @@ language: php
 php:
   - 7.2
   - 7.3
-  - 7.4snapshot
+  - 7.4
   - nightly
 
 env:
-  EXTNAME: tinyexpr
+  EXTNAME: tinyexpression
 
 jobs:
   allow_failures:
@@ -23,7 +23,7 @@ branches:
 
 install:
   - phpize
-  - ./configure --enable-tinyexpr
+  - ./configure --enable-tinyexpression
   - make
 
 before_script:

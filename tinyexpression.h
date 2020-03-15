@@ -1,6 +1,6 @@
 /*
   +----------------------------------------------------------------------+
-  | TinyExpr PHP extension                                               |
+  | TinyExpression PHP extension                                               |
   +----------------------------------------------------------------------+
   | Copyright (c) 2020 MehrAlsNix                                              |
   +----------------------------------------------------------------------+
@@ -28,24 +28,24 @@
   +----------------------------------------------------------------------+
 */
 
-#ifndef PHP_TINYEXPR_H
-#define PHP_TINYEXPR_H 1
+#ifndef PHP_TINYEXPRESSION_H
+#define PHP_TINYEXPRESSION_H 1
 
-#define PHP_TINYEXPR_VERSION "0.0.1-dev"
-#define PHP_TINYEXPR_EXTNAME "tinyexpr"
+#define PHP_TINYEXPRESSION_VERSION "0.0.1-dev"
+#define PHP_TINYEXPRESSION_EXTNAME "tinyexpression"
 
 #ifdef PHP_WIN32
-# define PHP_TINYEXPR_API __declspec(dllexport)
+# define PHP_TINYEXPRESSION_API __declspec(dllexport)
 #elif defined(__GNUC__) && __GNUC__ >= 4
-# define PHP_TINYEXPR_API __attribute__ ((visibility("default")))
+# define PHP_TINYEXPRESSION_API __attribute__ ((visibility("default")))
 #else
-# define PHP_TINYEXPR_API
+# define PHP_TINYEXPRESSION_API
 #endif
 
 /* Declare all functions and classes of the extension */
-static PHP_FUNCTION(tinyexpr_interpret);
+static PHP_FUNCTION(tinyexpression_interpret);
 
-extern zend_module_entry tinyexpr_module_entry;
+extern zend_module_entry tinyexpression_module_entry;
 
 #endif
 

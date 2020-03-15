@@ -1,10 +1,10 @@
 // $Id$
 // vim:ft=javascript
 
-ARG_ENABLE("tinyexpr", "enable tinyexpr", "no");
+ARG_ENABLE("tinyexpression", "enable tinyexpression", "no");
 
-if (PHP_TINYEXPR != "no") {
-	EXTENSION("tinyexpr", "php_tinyexpr.c");
-	AC_DEFINE('HAVE_TINYEXPR', 1 , 'whether tinyexpr is enabled');
-	PHP_INSTALL_HEADERS("ext/tinyexpr/", "php_tinyexpr.h");
+if (PHP_TINYEXPRESSION != "no") {
+	EXTENSION("tinyexpression", "tinyexpression.c");
+	AC_DEFINE('HAVE_TINYEXPRESSION', 1 , 'whether tinyexpression is enabled');
+	PHP_INSTALL_HEADERS("ext/tinyexpression/", "tinyexpression.h");
 }

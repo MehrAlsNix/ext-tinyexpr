@@ -49,6 +49,8 @@ For log = natural log uncomment the next line. */
 #define INFINITY (1.0/0.0)
 #endif
 
+#pragma function (ceil)
+#pragma function (floor)
 
 typedef double (*te_fun2)(double, double);
 

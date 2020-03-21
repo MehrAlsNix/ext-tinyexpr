@@ -82,11 +82,16 @@ PHP_FUNCTION(tinyexpression_interpret)
     const char *str;
     size_t str_len;
 
-    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "s", &str, &str_len) != SUCCESS) {
-        return;
+    if (zend_parse_parameters(ZEND_NUM_ARGS(), "s", &str, &str_len) == FAILURE) {
+        RETURN_THROWS();
     }
 
     double d = te_interp(str, 0);
+
+    if (d == NAN) {
+        zend_throw_exception(zend_ce_exception, "Failed to evaluate expression", 0);
+    }
+
     RETVAL_DOUBLE(d);
 }
 

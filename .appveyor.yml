@@ -113,7 +113,7 @@ deploy:
   description: 'v$(appveyor_build_version)'
   provider: GitHub
   auth_token:
-    secure: <your encrypted token>
+    secure: j1Jbh1qfzjuoSHUDSY8wtR950kzgdnQwvKXjmpk+sQs5Ho49QI6PdC2EDqECCrqe
   artifact: '$(RELEASE_ZIPBALL).zip'
   draft: false
   prerelease: true

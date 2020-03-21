@@ -99,7 +99,7 @@ function InstallPhpDevPack {
 	$RemoteUrl = "http://windows.php.net/downloads/{0}/php-devel-pack-{1}-{2}-{3}-{4}.zip" -f
 	$ReleasesPart, $Version, $BuildType, $VC, $Platform
 
-	$Archive   = "C:\Downloads\php-devel-pack-${Version}-${BuildType}-VC${VC}-${Platform}.zip"
+	$Archive   = "C:\Downloads\php-devel-pack-${Version}-${BuildType}-${VC}-${Platform}.zip"
 
 	if (-not (Test-Path "${InstallPath}\phpize.bat")) {
 		if (-not (Test-Path $Archive)) {

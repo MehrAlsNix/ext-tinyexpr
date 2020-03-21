@@ -11,32 +11,32 @@ environment:
 
   matrix:
     - PHP_VERSION: 7.2
-      VC_VERSION: 15
+      VC_VERSION: vs16
       BUILD_TYPE: Win32
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 
     - PHP_VERSION: 7.2
-      VC_VERSION: 15
+      VC_VERSION: vs16
       BUILD_TYPE: nts-Win32
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 
     - PHP_VERSION: 7.3
-      VC_VERSION: 15
+      VC_VERSION: vs16
       BUILD_TYPE: Win32
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 
     - PHP_VERSION: 7.3
-      VC_VERSION: 15
+      VC_VERSION: vs16
       BUILD_TYPE: nts-Win32
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 
     - PHP_VERSION: 7.4
-      VC_VERSION: 15
+      VC_VERSION: vs16
       BUILD_TYPE: Win32
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 
     - PHP_VERSION: 7.4
-      VC_VERSION: 15
+      VC_VERSION: vs16
       BUILD_TYPE: nts-Win32
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 

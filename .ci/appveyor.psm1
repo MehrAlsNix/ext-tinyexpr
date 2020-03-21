@@ -16,6 +16,14 @@ Function InitializeBuildVars {
 			$Env:VSCOMNTOOLS = $Env:VS140COMNTOOLS -replace '\\$', ''
 			Break
 		}
+		'vc17' {
+			If (-not (Test-Path $Env:VS150COMNTOOLS)) {
+				Throw'The VS150COMNTOOLS environment variable is not set. Check your VS installation'
+			}
+
+			$Env:VSCOMNTOOLS = $Env:VS150COMNTOOLS -replace '\\$', ''
+			Break
+		}
 		default {
 			Throw 'This script is designed to run with VS 14/15. Check your VS installation'
 		}

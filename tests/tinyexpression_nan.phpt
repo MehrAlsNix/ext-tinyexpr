@@ -1,5 +1,5 @@
 --TEST--
-tinyexpr_interp basic test
+tinyexpression_nan basic test
 --SKIPIF--
 <?php
 if (!extension_loaded("tinyexpression")) print "skip";
@@ -7,8 +7,10 @@ if (!extension_loaded("tinyexpression")) print "skip";
 ?>
 --FILE--
 <?php
-var_dump(tinyexpr_interp("1+1"));
+$nan = tinyexpr_interp("(1+1");
+var_dump($nan, is_nan($nan));
 
 ?>
 --EXPECT--
-float(2)
+float(NAN)
+bool(true)

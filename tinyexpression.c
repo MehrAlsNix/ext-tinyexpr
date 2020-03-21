@@ -42,7 +42,7 @@
 #if HAVE_TINYEXPRESSION
 
 /* Argument info for each function, used for reflection */
-ZEND_BEGIN_ARG_INFO_EX(arginfo_tinyexpression_interpret, 0, 0, 1)
+ZEND_BEGIN_ARG_INFO_EX(arginfo_tinyexpr_interp, 0, 0, 1)
     ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
@@ -56,7 +56,7 @@ PHP_MINFO_FUNCTION(tinyexpression)
 
 /* Add all functions. (Keep PHP_FE_END as last element) */
 static const zend_function_entry te_functions[] = {
-    PHP_FE(tinyexpression_interpret, arginfo_tinyexpression_interpret)
+    PHP_FE(tinyexpr_interp, arginfo_tinyexpr_interp)
     PHP_FE_END
 };
 
@@ -77,7 +77,7 @@ zend_module_entry tinyexpression_module_entry = {
 ZEND_GET_MODULE(tinyexpression)
 #endif
 
-PHP_FUNCTION(tinyexpression_interpret)
+PHP_FUNCTION(tinyexpr_interp)
 {
     const char *str;
     size_t str_len;
@@ -87,10 +87,6 @@ PHP_FUNCTION(tinyexpression_interpret)
     }
 
     double d = te_interp(str, 0);
-
-    if (d == NAN) {
-        zend_throw_exception(zend_ce_exception, "Failed to evaluate expression", 0);
-    }
 
     RETVAL_DOUBLE(d);
 }

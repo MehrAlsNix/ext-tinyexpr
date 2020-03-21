@@ -30,17 +30,17 @@ tbd.
 
 ### Functions
 
-#### tinyexpression_interpret
+#### tinyexpr_interp
 <hr>
 (TinyExpression 0.1.0)
 <br>
 <br>
 
-tinyexpression_interpret - Evaluate math expressions from a `string`.
+tinyexpr_interp - Evaluate math expressions from a `string`.
 
 ##### Description
 ```
-tinyexpression_interpret ( string $expr ) : float
+tinyexpr_interp ( string $expr ) : float
 ```
 
 ##### Parameters
@@ -60,11 +60,21 @@ docker-compose exec php bash
 ```
 
 ```
-php -r "var_dump(tinyexpression_interpret('2*9+8-(5/9)'));"
-php -r "var_dump(tinyexpression_interpret('sin(0.6)'));"
+php -r "var_dump(tinyexpr_interp('2*9+8-(5/9)'));"
+ 
+float(25.444444444444)
 ```
 
 ```
-float(25.444444444444)
+php -r "var_dump(tinyexpr_interp('sin(0.6)'));"
+ 
 float(0.56464247339504)
+```
+
+Not parsable expressions will return `NAN`:
+```
+php -r "var_dump(tinyexpr_interp('(1+2'), is_nan(tinyexpr_interp('(1+2')));"
+ 
+float(NAN)
+bool(true)
 ```

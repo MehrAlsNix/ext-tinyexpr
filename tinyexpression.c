@@ -35,6 +35,7 @@
 #include "php.h"
 #include "php_ini.h"
 #include "tinyexpression.h"
+#include "zend.h"
 #include "zend_API.h"
 #include "zend_exceptions.h"
 #include "ext/standard/info.h"

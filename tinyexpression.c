@@ -35,8 +35,6 @@
 #include "php.h"
 #include "php_ini.h"
 #include "tinyexpression.h"
-#include "zend.h"
-#include "zend_API.h"
 #include "zend_exceptions.h"
 #include "ext/standard/info.h"
 #include "tinyexpr.c"
@@ -85,7 +83,8 @@ PHP_FUNCTION(tinyexpr_interp)
     size_t str_len;
 
     if (zend_parse_parameters(ZEND_NUM_ARGS(), "s", &str, &str_len) == FAILURE) {
-        RETURN_THROWS();
+        zend_throw_exception(zend_ce_exception, "Invalid Argument", 0);
+        return;
     }
 
     double d = te_interp(str, 0);
